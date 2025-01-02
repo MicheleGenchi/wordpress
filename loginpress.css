@@ -1,0 +1,138 @@
+:root {
+    --sfondo: url("wp-content/uploads/sfondologin.jpg");
+    --logo: url("wp-content/uploads/logo.png");
+    --colore-principale:Red;
+	--colore-principale-scuro:#8b0000;
+	--colore-principale-chiaro:#ff5f5f;
+	--colore-secondario-scuro:#ffffff99;
+	--colore-secondario-chiaro:#ffffffce;
+	--colore-secondario:#ffffff;
+    --box-shadow: 2px 5px 5px var(--colore-secondario-scuro);
+    --border: 1px solid black;
+    --border-radius: 10px 10px 10px 10px;
+    --font: Arial, Helvetica, sans-serif;
+    --size: 14px;
+}
+
+/* --------------------------------- BODY -------------------------------------*/
+body.login {
+    background-image: var(--sfondo);
+    font-family: var(--font);
+    font-size: var(--size);
+}
+
+/* -------------------------------- DIV -------------------------------------*/
+div#login h1 a {
+    background-image: var(--logo);
+    width: 100px;
+    height: 100px;
+}
+
+div#login {
+    background-color: var(--colore-principale-scuro);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: var(--colore-principale);
+}
+
+/* -------------------------------- FORM -------------------------------------*/
+form#loginform {
+    background: var(--colore-principale-chiaro);
+    padding: 20px 15px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+#loginform label {
+    color: var(--colore-secondario);
+    line-height: 20px;
+    margin: 0 0 10px;
+}
+
+#loginform input[type="text"],
+#loginform input[type="password"] {
+    box-shadow: none;
+    border: var(--border);
+    background: #FFF;
+    border-radius: var(--border-radius);
+    padding-left: 5px;
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+
+#loginform input:hover,
+#loginform a:hover {
+    font-weight: 700 !important;
+    zoom: 1.2;
+}
+
+#loginform input[type="submit"] {
+    border-radius: var(--border-radius);
+    background-color: var(--colore-principale-chiaro);
+}
+
+#loginform input[type="submit"]:hover {
+    background-color: var(--colore-principale);
+    zoom: 1.2;
+}
+
+
+input[type=checkbox]:focus,
+input[type=checkbox]:checked {
+    border-color: black;
+}
+
+input[type=checkbox]:checked:before {
+    content: url(data:image/svg+xml;utf8,<svg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27><path%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%23ad6c77%27%2F><%2Fsvg>);
+    margin: -0.25rem 0 0 -0.275rem !important;
+}
+
+#loginform>p>input[type="submit"] {
+    border: 1px solid var(--colore-secondario-scuro);
+    border-radius: 18px!important;
+    background-color: var(--colore-principale-scuro)!important;
+    box-shadow: var(--box-shadow) !important;
+    color:var(--colore-secondario)!important;
+}
+
+#loginform>p>input[type="submit"]:hover {
+    box-shadow: var(--box-shadow) inset !important;
+    color:var(--colore-secondario-chiaro)!important;
+}
+
+/*-------------------------------- NAV E BACKTOBLOG -------------------------*/
+
+div#login>p#nav>a,
+div#login>p#backtoblog>a {
+    margin: 0 auto; 
+    text-align: center;
+    font-size:var(--size);
+    color: var(--colore-secondario-chiaro);
+}
+
+div#login>p#nav>a:hover,
+div#login>p#backtoblog>a:hover {
+    font-weight: bold;
+    color: var(--colore-secondario);
+}
+
+/*-------------------------------- COPYRIGHT -------------------------*/
+
+.copyRight {
+    background-color: var(--colore-principale-chiaro) !important;
+    color: var(--colore-secondario-chiaro);
+}
+
+.copyRight:hover {
+    background-color: var(--colore-principale-scuro) !important;
+    color: var(--colore-principale-chiaro);
+}
+
+p#copyright>a {
+    color: var(--colore-secondario);
+}
+ 
+p#copyright>a:hover {
+    font-weight: 700 !important;
+    zoom: 1.2;
+}

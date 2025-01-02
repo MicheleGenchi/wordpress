@@ -1,0 +1,21 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "pathMappings": {
+                "/luir/": "${workspaceRoot}\\luir\\wp-content", //sito luir
+                "/nft_site/": "${workspaceRoot}\\nft_site\\wp-content", //sito nft_site
+                "/nuova-testata/": "${workspaceRoot}\\nuova-testata\\wp-content", //sito nuova-testata
+                "/PrivateUserFile/": "${workspaceRoot}\\PrivateUserFile\\wp-content", //sito nft_site
+                "/testata/": "${workspaceRoot}\\testata\\wp-content", //sito testata
+            }
+        }
+    ]
+}

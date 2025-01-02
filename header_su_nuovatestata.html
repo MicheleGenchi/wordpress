@@ -1,0 +1,124 @@
+<!-- header  data meteo e seguici -->
+<link href="https://fonts.cdnfonts.com/css/kepler-std-3" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/lunar-2" rel="stylesheet">
+<script>
+		const desktop="#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-main-header.cwp-sticky-disable.cwp-enable-overlay > div > div > div.cwp-grid-column.grid-1 > div";
+	    const mobile="#cwp-header-wrap > div.cwp-mobile-header.cwp-hide-on-desktop > div.cwp-main-header > div > div > div.cwp-grid-column.grid-1 > div";
+	 	document.addEventListener("DOMContentLoaded", function (event) {
+			var html1="<div class='header-titolo'><a href='https://www.anconanewstoday.it'><h1>ANCONA<span>NEWS</span>TODAY</h1></a></div>";
+			var html2="<div class='header-titolo'><a href='https://www.anconanewstoday.it'><h1>ANCONA<span>NEWS</span><br>TODAY</h1></a></div>";
+			document.querySelector(desktop).insertAdjacentHTML('afterbegin',html1);
+			document.querySelector(mobile).insertAdjacentHTML('afterbegin',html2);
+		
+		window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 14,cityid: '6542126',appid: 'd40168b3d193b961aa626df384c36800',units: 'metric',containerid: 'openweathermap-widget-14',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+		});
+</script>
+
+<style>
+	/* data */
+	#custom-header {
+	  display: inline-grid;
+	  grid-template-columns: 50% 70% 30%;
+	  vertical-align:middle;
+	}
+	
+	#custom-header #item1, #custom-header #item3 {
+		padding:5px;
+	}
+
+	/* style per titolo */
+	header .header-titolo {
+		display:inline-block;
+		align-content:center;
+		vertical-align:middle;
+	}
+	header .header-titolo>a>h1 {
+		font-family: 'LUNAR', sans-serif;
+		font-size:76px;
+		letter-spacing: 0.2em;
+		font-weight:bolder;
+		text-align:center;
+	}	
+
+	header .header-titolo>a>h1, header .header-titolo>a>h1>span>h1 {
+		color:var(--colore-principale);
+	}
+	header .header-titolo>a>h1>span {
+		font-size:64px;
+		color:var(--colore-secondario);
+	}
+
+	/* data */
+	#custom-header>#item1>p {
+	font-size:22px;
+	}
+
+/* style per openweather */
+	#openweathermap-widget-14>#container-openweathermap-widget-14>div>div.widget-left-menu__footer {
+	display:none;
+	}
+	#openweathermap-widget-14 .widget-left-menu__header-container {
+		display:none;
+	}
+	#container-openweathermap-widget-14 {
+		min-width:0;
+	}
+	#openweathermap-widget-14  .widget-left.widget-left--small2.widget-left--brown,
+	#openweathermap-widget-14  .widget-left-menu.widget-left-menu--small.widget-left-menu--brown {
+		box-shadow:none;
+	}
+	#openweathermap-widget-14 .weather-left-card__number.weather-left-card__number--small {
+		margin-left:0;
+		margin-right:auto;
+	}
+	#openweathermap-widget-14 * {
+		min-height:0;
+		min-width:0;
+	}
+	.widget-left-menu--brown {
+         background-image:none!important;
+	}
+	
+	/**********************************************  su cellulare e tablet  ********************************************/
+	/* fino a 992px il background del paragrafo social deve avere questo stile */
+	@media screen and (max-width: 992px) {
+		
+	/* Stile titolo per cellulare */
+	header .header-titolo * {
+ 	    text-align: center;
+	}
+	header .header-titolo>a>h1, header .header-titolo>a>h1>span>h1 {
+		font-size: 42px;
+	}
+	header .header-titolo>a>h1>span {
+		font-size: 36px;
+	}
+
+
+	#custom-header {
+		display:inline-flex;
+	}
+	#custom-header>#item1 {
+		max-width:100%;
+	}
+	/*widget meteo*/
+	#custom-header>#item2 {
+		display:none;
+	}
+		
+	/* data */
+	#custom-header>#item1>p {
+	font-size:18px;
+	}
+	/*seguici su*/
+	#custom-header>#item3 {
+		display:none;
+	}
+
+	#cwp-header-wrap > div.cwp-mobile-header.cwp-hide-on-desktop > div.cwp-main-header {
+		line-height:100px;
+		padding-top:0;
+		padding-bottom:0;
+	}
+}
+</style>

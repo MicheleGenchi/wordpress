@@ -1,0 +1,110 @@
+<!-- header  data meteo e seguici -->
+<link href="https://fonts.cdnfonts.com/css/kepler-std-3" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/lunar-2" rel="stylesheet">
+<script>
+	    const desktop="#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-main-header.cwp-sticky-disable.cwp-enable-overlay > div > div > div.cwp-grid-column.grid-1 > div";
+		const mobile="#cwp-header-wrap > div.cwp-mobile-header.cwp-hide-on-desktop > div.cwp-main-header > div > div > div.cwp-grid-column.grid-1 > div";
+	 	document.addEventListener("DOMContentLoaded", function (event) {
+			var html="<a class='titolo' href='https://www.leccetoday.com'><h1>LECCE</h1><h1>TODAY</h1></a>";
+			document.querySelector(desktop).insertAdjacentHTML('afterbegin',html);
+			document.querySelector(mobile).insertAdjacentHTML('afterbegin',html);
+		
+		window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 14,cityid: '6542124',appid: '9078a3c5a5963bef6ced8e76ff1c4a5d',units: 'metric',containerid: 'openweathermap-widget-14',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+		});
+</script>
+
+<style>
+	/* data */
+	#custom-header {
+	  display: inline-grid;
+	  grid-template-columns: 50% 80% 30%;
+	  vertical-align:middle;
+	}
+	
+	#custom-header #item1, #custom-header #item3 {
+		padding:5px;
+	}
+
+	/* style per titolo */
+	header .titolo {
+		display:inline-flex;
+		vertical-align:middle;
+	}	
+	header .titolo h1 {		
+		font-family: 'LUNAR', sans-serif;
+		font-size:76px;
+		letter-spacing: 0.2em;
+		font-weight:bolder;
+	}
+	header .titolo>h1:first-child {
+		color:darkred;
+	}
+	header .titolo>h1:nth-child(2) {
+		color:yellow;
+	}
+	
+	/* data */
+	#custom-header>#item1>p {
+	font-size:22px;
+	}
+
+/* style per openweather */
+	#openweathermap-widget-14>#container-openweathermap-widget-14>div>div.widget-left-menu__footer {
+	display:none;
+	}
+	#openweathermap-widget-14 .widget-left-menu__header-container {
+		display:none;
+	}
+	#container-openweathermap-widget-14 {
+		min-width:0;
+	}
+	#openweathermap-widget-14  .widget-left.widget-left--small2.widget-left--brown,
+	#openweathermap-widget-14  .widget-left-menu.widget-left-menu--small.widget-left-menu--brown {
+		box-shadow:none;
+	}
+	#openweathermap-widget-14 .weather-left-card__number.weather-left-card__number--small {
+		margin-left:0;
+		margin-right:auto;
+	}
+	#openweathermap-widget-14 * {
+		min-height:0;
+		min-width:0;
+	}
+	.widget-left-menu--brown {
+         background-image:none!important;
+	}
+	
+	/**********************************************  su cellulare e tablet  ********************************************/
+	/* fino a 992px il background del paragrafo social deve avere questo stile */
+	@media screen and (max-width: 992px) {
+		header .titolo h1 {
+			font-size: 58px;
+		}
+
+		#custom-header {
+			display:inline-flex;
+		}
+		#custom-header>#item1 {
+			max-width:100%;
+		}
+		/*widget meteo*/
+		#custom-header>#item2 {
+			display:none;
+		}
+		
+	/* data */
+	#custom-header>#item1>p {
+	font-size:18px;
+	}
+		/*seguici su*/
+		#custom-header>#item3 {
+			display:none;
+		}
+
+		#cwp-header-wrap > div.cwp-mobile-header.cwp-hide-on-desktop > div.cwp-main-header {
+			line-height:100px;
+			padding-top:0;
+			padding-bottom:0;
+		}
+	}
+</style>

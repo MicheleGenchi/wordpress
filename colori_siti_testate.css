@@ -1,0 +1,120 @@
+/* ------------------------------------------------------- Avellino News Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:#007a0e;
+	--colore-principale-chiaro:#65a861;
+	--colore-principale:#0ea800;
+	--colore-secondario:white;
+	--colore-secondario-scuro:#444443bb;
+	--colore-secondario-chiaro:#c2c1bf;
+	--box-shadow: 5px 5px 5px var(--colore-secondario);
+	--moz-box-shadow: 5px 5px 5px var(--colore-secondario);
+	--webkit-box-shadow: 5px 5px 5px var(--colore-secondario);
+	--khtml-box-shadow: 5px 5px 5px var(--colore-secondario);
+}
+
+/* ----------------------------------------------------  Brindisi News Today --------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-secondario:black;
+	--colore-principale:#2333dd;
+	--colore-secondario-chiaro:lightgray;
+	--colore-principale-chiaro:lightblue;
+	--colore-secondario-scuro:darkgray;
+	--colore-principale-scuro:darkblue;
+	--box-shadow: 5px 5px 5px #cccccc;
+	--moz-box-shadow: 5px 5px 5px #ccc;
+	--webkit-box-shadow: 5px 5px 5px #ccc;
+	--khtml-box-shadow: 5px 5px 5px #ccc;
+}
+
+/* ------------------------------------------------------- Frosinone News Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:darkblue;
+	--colore-principale-chiaro:lightblue;
+	--colore-principale:blue;
+	--colore-secondario:#b38e31;
+	--colore-secondario-scuro:#e2b212bb;
+	--colore-secondario-chiaro:#ffd684;
+	--box-shadow: 5px 5px 5px var(--colore-secondario);
+	--moz-box-shadow: 5px 5px 5px var(--colore-secondario);
+	--webkit-box-shadow: 5px 5px 5px var(--colore-secondario);
+	--khtml-box-shadow: 5px 5px 5px var(--colore-secondario);
+}
+
+/* ------------------------------------------------------- Lecce Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:darkred;
+	--colore-principale-chiaro:#ff8e8e;
+	--colore-principale:red;
+	--colore-secondario:#ffe600;
+	--colore-secondario-scuro:#ff9100;
+	--colore-secondario-chiaro:#ddcf7f;
+	--box-shadow: 5px 5px 5px #cccccc;
+	--moz-box-shadow: 5px 5px 5px #ccc;
+	--webkit-box-shadow: 5px 5px 5px #ccc;
+	--khtml-box-shadow: 5px 5px 5px #ccc;
+}
+
+/* ------------------------------------------------------- Roma News Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:#ffd900c0;
+	--colore-principale-chiaro:#ffed88;
+	--colore-principale:#ffd900;
+	--colore-secondario:Red;
+	--colore-secondario-scuro:#8b0000;
+	--colore-secondario-chiaro:#ff5f5f;
+	--box-shadow: 5px 5px 5px var(--colore-secondario);
+	--moz-box-shadow: 5px 5px 5px var(--colore-secondario);
+	--webkit-box-shadow: 5px 5px 5px var(--colore-secondario);
+	--khtml-box-shadow: 5px 5px 5px var(--colore-secondario);
+}
+
+/* ------------------------------------------------------- Taranto Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale:#dd3333;
+	--colore-secondario:#0800fc;
+	--colore-principale-chiaro:orangered;
+	--colore-secondario-chiaro:lightblue;
+	--colore-principale-scuro:#832020;
+	--colore-secondario-scuro:#03005e;
+	--box-shadow: 5px 5px 5px #cccccc;
+	--moz-box-shadow: 5px 5px 5px #ccc;
+	--webkit-box-shadow: 5px 5px 5px #ccc;
+	--khtml-box-shadow: 5px 5px 5px #ccc;
+}
+
+/* ------------------------------------------------------- Torino News Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:darkred;
+	--colore-principale-chiaro:#ff8e8e;
+	--colore-principale:red;
+	--colore-secondario:white;
+	--colore-secondario-scuro:grey;
+	--colore-secondario-chiaro:lightgrey;
+	--box-shadow: 5px 5px 5px #ccc;
+	--moz-box-shadow: 5px 5px 5px #ccc;
+	--webkit-box-shadow: 5px 5px 5px #ccc;
+	--khtml-box-shadow: 5px 5px 5px #ccc;
+}
+
+/* ------------------------------------------------------- Milano News Today ----------------------------------------------------- */
+/*------------------------------------------------------   colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:brown;
+	--colore-principale-chiaro:red;
+	--colore-principale:#8b0000;
+	--colore-secondario: #252525;
+	--colore-secondario-scuro: black;
+	--colore-secondario-chiaro:darkgrey;
+	--box-shadow: 5px 5px 5px #000000;
+	--moz-box-shadow: 5px 5px 5px #000000;
+	--webkit-box-shadow: 5px 5px 5px #000000;
+	--khtml-box-shadow: 5px 5px 5px #000000;
+}
+
