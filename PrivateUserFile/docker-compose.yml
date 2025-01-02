@@ -1,7 +1,7 @@
 services:
 
-  db_PrivateUserFile:
-    container_name: db_PrivateUserFile
+  db_privateuserfile:
+    container_name: db_privateuserfile
     image: mysql:8.0.32
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -13,27 +13,27 @@ services:
     networks:
       - net_PrivateUserFile
 
-  phpmyadmin_PrivateUserFile:
-    container_name: phpmyadmin_PrivateUserFile
+  phpmyadmin_privateuserfile:
+    container_name: phpmyadmin_privateuserfile
     depends_on:
-      - db_PrivateUserFile
+      - db_privateuserfile
     image: phpmyadmin/phpmyadmin
     ports:
       - 8080:80
     environment:
-       PMA_HOST: db_PrivateUserFile
+       PMA_HOST: db_privateuserfile
        MYSQL_ROOT_PASSWORD: root
     networks:
       - net_PrivateUserFile
 
 # wordpress PrivateUserFile
-  wordpress_PrivateUserFile:
-    container_name: wordpress_PrivateUserFile
+  wordpress_privateuserfile:
+    container_name: wordpress_privateuserfile
     build:
       context: .
       dockerfile: ./Dockerfile
     depends_on:
-      - db_PrivateUserFile
+      - db_privateuserfile
     volumes:
       - type: bind
         source: ./wp-content/uploads
