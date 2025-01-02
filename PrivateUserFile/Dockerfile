@@ -1,5 +1,5 @@
 FROM wordpress
-COPY ./luir/wp-content/uploads /var/www/html/wp-content/uploads
+COPY ./wp-content/uploads /var/www/html/wp-content/uploads
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 RUN apt update -y && apt install git zip zsh wget -y
