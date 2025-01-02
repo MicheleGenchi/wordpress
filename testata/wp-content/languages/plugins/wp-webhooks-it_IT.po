@@ -1,0 +1,142 @@
+# Translation of Plugins - WP Webhooks &#8211; Automate repetitive tasks by creating powerful automation workflows directly within WordPress - Stable (latest release) in Italian
+# This file is distributed under the same license as the Plugins - WP Webhooks &#8211; Automate repetitive tasks by creating powerful automation workflows directly within WordPress - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-08 08:03:49+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"Language: it\n"
+"Project-Id-Version: Plugins - WP Webhooks &#8211; Automate repetitive tasks by creating powerful automation workflows directly within WordPress - Stable (latest release)\n"
+
+#: core/includes/integrations/broken-link-checker/helpers/blc_helpers.php:18
+msgid "[%s] Broken links detected"
+msgstr "Sono stati trovati [%s] link non funzionanti"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:91
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:88
+msgid "Yearly"
+msgstr "Annuale"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:90
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:87
+msgid "Semi-Yearly"
+msgstr "Semi Annuale"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:89
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:86
+msgid "Quarterly"
+msgstr "Quadrimestrale"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:88
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:85
+msgid "Monthly"
+msgstr "Mensile"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:87
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:84
+msgid "Weekly"
+msgstr "Settimanale"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:86
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:83
+msgid "Daily"
+msgstr "Giornaliero"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:80
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:77
+msgid "Completed"
+msgstr "Completato"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:79
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:76
+msgid "Failing"
+msgstr "Fallimento"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:78
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:75
+msgid "Trialling"
+msgstr "In Prova"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:77
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:74
+msgid "Expired"
+msgstr "Scaduto"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:76
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:73
+msgid "Cancelled"
+msgstr "Cancellato"
+
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:75
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:72
+msgid "Active"
+msgstr "Attivo"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:128
+#: core/includes/integrations/edd/actions/edd_update_payment.php:64
+msgid "Processing"
+msgstr "In Processazione"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:127
+#: core/includes/integrations/edd/actions/edd_update_payment.php:63
+msgid "Revoked"
+msgstr "Revocato"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:126
+#: core/includes/integrations/edd/actions/edd_update_payment.php:62
+msgid "Abandoned"
+msgstr "Abbandonato"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:125
+#: core/includes/integrations/edd/actions/edd_update_payment.php:61
+msgid "Failed"
+msgstr "Fallito"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:124
+#: core/includes/integrations/edd/actions/edd_update_payment.php:60
+msgid "Refunded"
+msgstr "Rimborsato"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:123
+#: core/includes/integrations/edd/actions/edd_update_payment.php:59
+msgid "Complete"
+msgstr "Completato"
+
+#: core/includes/integrations/edd/actions/edd_create_payment.php:122
+#: core/includes/integrations/edd/actions/edd_create_subscription.php:74
+#: core/includes/integrations/edd/actions/edd_update_payment.php:58
+#: core/includes/integrations/edd/actions/edd_update_subscription.php:71
+msgid "Pending"
+msgstr "In attesa"
+
+#. Author URI of the plugin
+msgid "https://wp-webhooks.com/about/"
+msgstr "https://wp-webhooks.com/about/"
+
+#. Description of the plugin
+msgid "Put your website on autopilot by using webhooks to get rid of manual tasks and focus on what's really important for your business."
+msgstr "Metti il tuo sito in autopilota! Usando i webhooks puoi dimenticarti dei processi manuali e concentrarti su quello che è davvero importante per il tuo business."
+
+#. Plugin URI of the plugin
+msgid "https://wp-webhooks.com/"
+msgstr "https://wp-webhooks.com/"
+
+#: core/includes/classes/class-wp-webhooks-pro-upgrader-skin.php:16
+#: core/includes/integrations/wordpress/misc/plugin_upgrader_skin.php:30
+msgid "Update Plugin"
+msgstr "Aggiorna il plugin"
+
+#: core/class-wp-webhooks-pro.php:118 core/class-wp-webhooks-pro.php:128
+msgid "Cheatin&#8217; huh?"
+msgstr "Stai barando&#8217; eh?"
+
+#. Author of the plugin
+msgid "Ironikus"
+msgstr "Ironikus"
+
+#. Plugin Name of the plugin
+msgid "WP Webhooks"
+msgstr "WP Webhooks"

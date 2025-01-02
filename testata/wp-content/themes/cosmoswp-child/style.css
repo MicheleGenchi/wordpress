@@ -1,0 +1,462 @@
+/*
+Theme Name: CosmosWP Child
+Theme URI: https://www.cosmoswp.com/
+Template: cosmoswp
+Author: cosmoswp
+Author URI: https://www.cosmoswp.com/contact-us/
+Description: CosmosWP is a multi-purpose new generation modern Gutenberg WordPress theme, super-fast, easily customizable, flexible, beautiful, perfect, and highly extendable theme. With a simple download of the CosmosWP, you will have a striking and awesome theme for your website. A great way to design your website with a unique blend of style and technique. It will let you build around several kinds of a website such as a blog, portfolio, business, photography, entertainment etc. Also, specialized sites like Restaurant, Spa, Charity, Meditation, Wedding, Dentist, Education, Medical and much more. Being integrated with WooCommerce and Easy Digital Download you can even build an e-commerce based website. Besides that, it works well with almost all page builders as Gutentor, Elementor, SiteOrigin, Beaver Builder, Visual Composer, Divi, etc. Furthermore, features like SEO friendly, Responsive, RTL Ready, Translation Ready, Gutenberg compatible, and many other WordPress plugins compatible are also included in the theme. Finally, the theme already has an instant demo setup so you can commence your elegant and phenomenal website right away.
+Tags: blog,e-commerce,portfolio,grid-layout,one-column,two-columns,three-columns,four-columns,left-sidebar,right-sidebar,custom-background,custom-colors,custom-header,custom-logo,custom-menu,editor-style,featured-images,flexible-header,footer-widgets,full-width-template,microformats,post-formats,rtl-language-support,sticky-post,theme-options,threaded-comments,translation-ready,block-styles,wide-blocks
+Version: 1.3.7.1704998147
+Updated: 2024-01-11 19:35:47
+
+*/
+
+/*-------------------------------------------------------  TESTATA NEWS TODAY ------------------------------------------------*/
+
+/*-------------------------------------------------------   style.css tema    ---------------------------------------------------*/
+:root {
+	--colore-principale-scuro:brown;
+	--colore-principale-chiaro:red;
+	--colore-principale:darkred;
+	--colore-secondario: #252525;
+	--colore-secondario-scuro: black;
+	--colore-secondario-chiaro:lightgrey;
+	--box-shadow: 5px 5px 5px var(--colore-secondario-scuro);
+	--moz-box-shadow: 5px 5px 5px var(--colore-secondario-scuro);
+	--webkit-box-shadow: 5px 5px 5px var(--colore-secondario-scuro);
+	--khtml-box-shadow: 5px 5px 5px var(--colore-secondario-scuro);
+	--border-menu: 10px 10px 0px 0px;
+	--intestazione:url("wp-content/uploads/intestazione.png");
+}
+
+/* ---------------------------------------------------  centra body e setting principali  -------------------------------------*/
+body div {
+	margin:auto!important;
+}
+
+.cwp-logo {
+	background-image:var(--intestazione);
+	src:var(--intestazione);
+	height: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+.grid-container {
+	padding:0!important;
+}
+
+.grid-container>.grid-row {
+	border-radius:10px 10px 0 0;
+}
+
+.gutentor-col-wrap.has-color-bg.has-custom-bg {
+	background-color: var(--colore-principale-scuro)!important;
+	color:var(--colore-secondario)!important;
+}
+
+.gutentor-col-wrap.has-color-bg.has-custom-bg .gutentor-text-wrap>.gutentor-text {
+	color:var(--colore-secondario)!important;
+}
+
+.gutentor-text-wrap.divider-bottom {
+	color: var(--colore-principale-scuro)!important;
+}
+
+.gutentor-text-wrap.divider-bottom p {
+	color: black;
+}
+
+.btn,.btn-primary {
+	margin:auto;
+	padding:6px 12px 6px 12px;
+	background-color:var(--colore-secondario);
+	border-style:solid;
+	border:1px;
+	border-color:var(--colore-secondario-scuro);
+}
+
+/* ---------------------------------------------------------- Separator ------------------------------------------------*/
+.divider-bottom {
+	border-color: var(--colore-principale-scuro)!important;
+}
+
+section div.wp-block-gutentor-e16 {
+	border-color: var(--colore-principale-scuro)!important;
+}
+
+
+.gutentor-element-advanced-text.enable-title-design .gutentor-text-wrap .gutentor-separator.border-solid, .gutentor-element-advanced-text.enable-title-design .gutentor-text-wrap .gutentor-separator.border-dashed, .gutentor-element-advanced-text.enable-title-design .gutentor-text-wrap .gutentor-separator.border-double, .gutentor-element-advanced-text.enable-title-design .gutentor-text-wrap .gutentor-separator.border-dotted {
+	width: 30px!important;
+	width: 15% !important;
+	margin: -23px 0 0 0 !important;
+	color: black!important;
+	border-color: var(--colore-principale)!important;
+}
+
+/* ----------------------------------------------------------  header  -------------------------------------------------*/
+/*etichetta seguici sui social */
+.cwp-custom-html {
+    padding: 0!important;
+}
+
+p#social {
+	background-color:var(--colore-principale-scuro);
+	margin:auto;
+	color:var(--colore-secondario);
+	vertical-align:middle;
+	text-align:center;
+	font-size:18px;
+	padding:3px;
+	box-shadow: var(--box-shadow);
+}
+/* icone social nell'header */
+div.cwp-social-links {
+	font-size:22px;
+}
+
+div.cwp-social-links>ul li i {
+	color: var(--colore-principale-scuro);	
+}
+div.cwp-social-links>ul li:hover {
+	background-color: var(--colore-principale-scuro)!important;
+}
+
+div.cwp-social-links>ul li:hover i {
+	color:var(--colore-secondario)!important;
+}
+
+#cwp-header-wrap .cwp-desktop-header.cwp-hide-on-mobile div.cwp-top-header.cwp-sticky-disable ul li 
+{
+	background-color:var(colore-principale-scuro)!important;
+}
+
+div.cwp-social-links>ul li:hover i {
+	color:var(--colore-secondario-scuro);
+}
+/* menu header and submenu*/
+div.cwp-main-header.cwp-sticky-disable {
+	border-radius:var(--border-menu);
+}
+
+div.cwp-main-header.cwp-sticky-disable > div.grid-container {
+	background-color: var(--colore-principale);	
+	color: var(--colore-secondario);
+	border:3px solid var(--colore-secondario);
+	border-bottom:0;
+	border-radius:var(--border-menu);
+}
+
+div.cwp-main-header > div.grid-container > div.grid-row {
+	background-color: var(--colore-principale);
+	border-style: solid;
+	border:2px;
+	border-color:var(--colore-principale-scuro);
+}
+
+div.cwp-main-header > div.grid-container > div.grid-row li a {
+	color:white; /*var(--colore-secondario);*/
+}
+
+div.cwp-main-header > div.grid-container > div.grid-row li:hover {
+	background-color: var(--colore-principale-scuro);
+}
+
+div.cwp-main-header > div.grid-container > div.grid-row > li:hover a {
+	color:white; /*var(--colore-secondario);*/
+}
+
+.cwp-primary-menu li:active, .cwp-primary-menu li.current-menu-item {
+    background-color: var(--colore-principale-scuro);
+}
+
+/* submenu */
+.cwp-primary-menu li ul.sub-menu {
+	background-color: var(--colore-principale)!important;
+}
+
+
+/* Ricerca sulla barra menu */
+div.search {
+	background-color: var(--colore-principale-chiaro);
+}
+
+/* Ricerca sulla barra menu */
+div.search:hover {
+	background-color: var(--colore-secondario);
+}
+
+/* Login Bottom */
+a.btn.btn-primary {
+	box-shadow:1px 1px 7px 5px inset var(--colore-principale-scuro);
+	border-radius:5px;
+	font-size:14px;
+}
+
+a.btn.btn-primary:hover {
+	background-color:var(--colore-principale);
+	color:var(--colore-secondario-chiaro);
+	font-weight:bold;
+	border:2px;
+	box-shadow:1px 1px 7px 5px inset black;
+}
+/*-------------------------------------------------------  load more  -------------------------------------------*/
+span.gutentor-button-wrap > a.gutentor-button {
+	color:var(--colore-principale-scuro);
+}
+
+span.gutentor-button-wrap:hover > a.gutentor-button {
+	color:var(--colore-principale);
+}
+
+
+
+
+/*----------------------------------------------------  barra laterale  -----------------------------------------*/
+
+/* Margini content/barra in Advanced Columns */
+.theiaStickySidebar>div:nth-child(1) {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.theiaStickySidebar>div:nth-child(2) {
+	margin-left:20px;
+}
+
+/* meteo */
+div#container-openweathermap-widget-13 {
+	margin-top:30%!important;
+	margin-left:25%!important;
+}
+/* blocco seguici */
+.seguici-laterale {
+	background-color:var(--colore-principale-scuro);
+	color:var(--colore-secondario);
+}
+
+/* icon social */
+.gutentor-social {
+	margin-top:40px;
+}
+.gutentor-single-item-icon-box {
+	padding:10px;
+	/*background-color:white;*/
+	color:white;
+}
+.gutentor-single-item-icon-box i {
+	color:white;
+}
+.gutentor-single-item-icon-box:hover {
+	background-color: white;
+}
+
+.gutentor-single-item-icon-box:hover i {
+	color:var(--colore-principale-scuro);
+}
+
+
+.gutentor-module .gutentor-container-cover {
+	border-color:var(--colore-principale-scuro);
+}
+
+
+/* -----------------------------  pulsanti di navigazione delle pagine avanti(<) e indietro(<) ------------------- */
+ul.gutentor-next-prev li a:hover:not(li a.gutentor-disabled), ul.gutentor-next-prev li a:active {
+	background-color: var(--colore-principale-scuro);	
+	color:white;
+}
+
+ul.gutentor-pagination li a:hover:not(li a.gutentor-disabled), ul.gutentor-pagination li.gutentor-pagination-active a {
+	background-color: var(--colore-principale-scuro);	
+	color:white;
+}
+
+div.gutentor-navigation>ul.gutentor-next-prev li a{
+	background-color:var(--colore-secondario-scuro);
+}
+
+div.gutentor-navigation>ul.gutentor-next-prev li {
+	color:var(--colore-secondario);
+}
+
+div.gutentor-navigation>ul.gutentor-next-prev li .gutentor-disabled {
+	background-color: var(--colore-secondario-chiaro);
+}
+
+ul.slick-dots>li:hover,ul.slick-dots>li>button:hover {
+	background-color:var(--colore-principale)!important;
+}
+
+/*-------------------------------------------------------   footer top ---------------------------------------------*/
+/* scritta ed icone social */
+p#footer-social {
+	color:white;
+	font-size:20px;
+	vertical-align:middle;
+	text-align:right;
+}
+div.cwp-footer-social-links {
+	font-size:20px;
+	text-align:left;
+}
+
+/* -------------------------------------------------------- footer main -----------------------------------------------*/
+.cwp-main-footer  {
+	color:var(--colore-secondario)!important;
+}
+
+.cwp-main-footer .widget a {
+    color: var(--colore-secondario-chiaro)!important;
+}
+
+.cwp-main-footer .widget a:hover {
+    color: var(--colore-principale-chiaro)!important;
+	font-weight:700;
+}
+
+
+/* textbox di ricerca */
+form.seach input {
+	color: var(colore-principale-scuro);
+}
+input.search-submit {
+	background-color:var(--colore-principale-scuro);	
+}
+input.search-submit:hover {
+	background-color:var(--colore-principale);	
+}
+
+/* ------------------------------------------------------ footer bottom ---------------------------------------------- */
+a#copyright {
+	color: var(--colore-secondario-chiaro);
+}
+
+a#copyright:hover {
+	font-weight:bold!important;
+	color: var(--colore-principale-chiaro);
+	zoom:1.2;
+}
+
+/*----------------------------------------------------- scroll button --------------------------------------------*/
+a.cwp-scroll-to-top {
+	background-color:var(--colore-principale-scuro);
+	color:var(--colore-secondario);
+}
+
+a.cwp-scroll-to-top:hover {
+	background-color:var(--colore-principale);
+	color:var(--colore-secondario-scuro);
+	border:2px dashed var(--colore-secondario);
+}
+
+a.cwp-scroll-to-top:hover i {
+	color:var(--colore-secondario);
+}
+
+/* -----------------------------------------------   gestione degli annunci   ------------------------------------------*/
+.modal-posizionamento_content {
+	display: flex;
+}
+
+.modal-posizionamento_content img, .posizionamento_laterale img {
+	width: 300px;
+	height: auto;
+	margin:10%;
+	padding:10%;
+}
+
+
+/* ----------------------------------------------------------- altro ---------------------------------------- */
+.gutentor-categories > a{
+	color: var(--colore-principale-scuro);
+}
+
+div.gutentor-filter-navigation > div.gutentor-filter-wrap > ul.gutentor-filter-list > li.gutentor-filter-item:hover a, div.gutentor-filter-navigation > div.gutentor-filter-wrap > ul.gutentor-filter-list > li.gutentor-filter-item a:hover {
+	font-weight:bold;
+	font-size:16px;
+	color: var(--colore-principale)!important;
+}
+
+
+
+
+
+/**************************************************************************  su cellulare e tablet  ***************************************************************/
+/* fino a 992px il background del paragrafo social deve avere questo stile */
+@media screen and (max-width: 992px) {
+
+
+	/*-------------------------------------------------------  header  ---------------------------------------- */
+	/* menu icon */
+	.cwp-mobile-header>.cwp-top-header:hover a i {
+		color: black;
+	}
+	.cwp-mobile-header>.cwp-top-header:hover a i {
+		color: var(--colore-principale)!important;
+	}
+	
+	.cwp-header-menu-sidebar li {
+		color: var(--colore-secondario)!important;	
+	}
+	
+	.cwp-header-menu-sidebar li:hover {
+		color: var(--colore-principale)!important;
+	}
+	
+	
+	/* header paragrafo and social icon */
+	/* colore e dimensioni del blocco social*/
+    .cwp-bottom-header {
+		background-color: var(--colore-principale);
+		padding-top:20px;
+		padding-bottom:20px;
+		vertical-align: middle;
+	}
+
+	p#social {
+		background:var(--colore-principale-scuro);
+        text-align:left;
+		color:white;
+		font-size:15px;
+	}
+	div.cwp-social-links ul li {
+		background-color:white;
+		color:var(--colore-principale-scuro);
+	}
+	
+
+
+
+	/*--------------------------------------  pubblicità su cellulare e tablet   ----------------------------*/
+	/* solo un blocco pubblicitario sul cellulare,nasconde gli altri 2 */
+	.modal-posizionamento_content>*:nth-child(2) {
+		display:none;
+	}
+	.modal-posizionamento_content>*:nth-child(3) {
+		display:none;
+	}	
+	
+	
+
+	/* ----------------------------------------------  barra laterale  ----------------------------------------- */
+	/* barra laterale icone social messe in verticale*/
+	div.gutentor-single-item-content {
+		margin-left:42%;
+		margin-right:40%;
+	}
+	
+	
+
+	/*---------------------------------------------------  footer top ---------------------------------------------------*/
+	/* footer social */
+	div.cwp-footer-social-links {
+		font-size:14px;
+		text-align:left;
+	}
+	p#footer-social {
+		font-size:14px;
+		text-align:left;
+	}
+}
+

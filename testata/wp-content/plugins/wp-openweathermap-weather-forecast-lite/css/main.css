@@ -1,0 +1,139 @@
+
+   #myMap {height: 404px;}
+   .currentStats li {font-size: 1.2em;}
+  
+   @media only screen and (max-width: 763px) {
+    .fcitem {
+      margin-bottom: 20px;
+    }
+    #myMap {height: 310px;}
+   }
+
+
+    .owm-left-30 {
+        width: 39%;
+        float: left;
+    }
+    .owm-right-70 {
+        width: 59%; float: right;
+    }
+
+
+    .owm-right-30 {
+        width: 39%;
+        float: right;
+    }
+    .owm-left-70 {
+        width: 59%; float: left;
+    }
+
+    .current_item {
+      display: block;padding: 4px; margin-top: 4px; margin-bottom: 4px; font-size: 16px;
+    }
+    .current_item i {font-size: 17px;}
+    .current_itm_value {float: right;}
+    .bgenable {
+      background-color: #ccc;
+    }
+
+    .forecast_container {
+      /*display: inline; */
+      clear: both;
+  padding: 0px;
+  margin: 0px;
+     font-size: 11px;
+    }
+    .forecast_container i {
+      font-size: 18px; vertical-align: middle; margin-top: 6px;
+    }
+    
+    /*  COLUMN SETUP  */
+.fc_item {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.fc_item:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF SEVEN  */
+.span_7_of_7 {
+  width: 100%;
+}
+
+.span_6_of_7 {
+    width: 85.48%;
+}
+
+.span_5_of_7 {
+    width: 70.97%;
+}
+
+.span_4_of_7 {
+    width: 56.45%;
+}
+
+.span_3_of_7 {
+    width: 41.94%;
+}
+
+.span_2_of_7 {
+    width: 27.42%;
+}
+
+.span_1_of_7 {
+    width: 12.91%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 567px) {
+  .fc_item {  margin: 1% 0 1% 0%; }
+  .span_1_of_7, .span_2_of_7, .span_3_of_7, .span_4_of_7, .span_5_of_7, .span_6_of_7, .span_7_of_7 { width: 100%; }
+}
+
+
+@media only screen and (max-width: 967px) {
+
+    .owm-left-30 {
+        width: 100%;
+        float: left;
+    }
+    .owm-right-70 {
+        width: 100%; float: right;
+    }
+
+
+    .owm-right-30 {
+        width: 100%;
+        float: right;
+    }
+    .owm-left-70 {
+        width: 100%; float: left;
+    }
+
+}
+
+
+
+
+.fc_data {
+  display: block; margin-top: 8px;
+}
+.fc_item {
+  background-color: #ccc;
+  padding: 4px;
+}
+.fc_value {
+  display: block; font-size: 14px; border-bottom: solid 1px #777;
+}
+.change_owm_unit {
+  display: inline;
+}
+.search_owm_city {
+  display: inline; max-width: 230px;
+}
