@@ -1,0 +1,99 @@
+/*
+Theme Name: Twenty Twenty-Four Child
+Theme URI: https://wordpress.org/themes/twentytwentyfour/
+Template: twentytwentyfour
+Author: the WordPress team
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Tags: one-column,custom-colors,custom-menu,custom-logo,editor-style,featured-images,full-site-editing,block-patterns,rtl-language-support,sticky-post,threaded-comments,translation-ready,wide-blocks,block-styles,style-variations,accessibility-ready,blog,portfolio,news
+Version: 1.0.1709647232
+Updated: 2024-03-05 15:00:32
+
+*/
+
+html {
+	margin-top:0!important;
+}
+
+#wpadminbar {
+	display:none;
+}
+
+main {
+	background-color: white!important;
+}
+main section.form {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	display:none;
+}
+
+main #myform {
+	margin-left:15%;
+}
+
+main * {
+	font-size:24px;
+}
+
+main #myform {
+	width:100%;
+}
+main #myform input,label,p {
+	line-height:50px;
+	height:50px;
+	margin-bottom:40px;
+	vertical-align: middle;
+}
+
+main #myform input {
+	padding-left:20px;
+}
+main #myform .field {
+	display:block;
+	width:100%;
+}
+
+main #myform label {
+	padding-left:0;
+    width:120px;
+    text-transform: uppercase;
+    display:inline-block;
+}
+
+main #myform button {
+	margin-left: 25%;
+	margin-right: 25%;
+	padding:5px 15px 5px 15px;
+	border-radius:15px;
+	vertical-align: middle;
+	margin-bottom:40px;
+}
+
+main #myform input:hover, main #myform button:hover, main #myform a:hover, main #myform button:hover {
+	font-weight: bold;
+	color:brown;
+}
+
+.user_role {
+	color:brown;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.xoo-el-popup-active .xoo-el-wrap>.xoo-el-sidebar {
+	background-image: url("http://localhost:8004/wp-content/uploads/login.jpg");
+	/*background-color: brown;*/
+}
+
+
+body {
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+header a:hover, header button:hover, footer a:hover, footer button:hover {
+	background-color:brown;
+}

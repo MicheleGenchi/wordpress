@@ -1,0 +1,57 @@
+services:
+
+  db_PrivateUserFile:
+    container_name: db_PrivateUserFile
+    image: mysql:8.0.32
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_PrivateUserFile
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - data_PrivateUserFile:/var/lib/mysql
+    networks:
+      - net_PrivateUserFile
+
+  phpmyadmin_PrivateUserFile:
+    container_name: phpmyadmin_PrivateUserFile
+    depends_on:
+      - db_PrivateUserFile
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+       PMA_HOST: db_PrivateUserFile
+       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - net_PrivateUserFile
+
+# wordpress PrivateUserFile
+  wordpress_PrivateUserFile:
+    container_name: wordpress_PrivateUserFile
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db_PrivateUserFile
+    volumes:
+      - type: bind
+        source: ./wp-content/uploads
+        target: /var/www/html/wp-content/uploads
+      - ./wp-content:/var/www/html/wp-content
+      - ./upload.ini:/usr/local/etc/php/conf.d/upload.ini
+    environment:
+      WORDPRESS_DB_HOST: db_PrivateUserFile
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: db_PrivateUserFile
+    ports:
+      - 8000:80
+    networks:
+      - net_PrivateUserFile
+
+networks:
+  net_PrivateUserFile:
+           
+volumes:
+  data_PrivateUserFile: {}
