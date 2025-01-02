@@ -1,0 +1,57 @@
+services:
+
+  db_nuova-testata:
+    container_name: db_nuova-testata
+    image: mysql:8.0.32
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_nuova-testata
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - data_nuova-testata:/var/lib/mysql
+    networks:
+      - net_nuova-testata
+
+  phpmyadmin_nuova-testata:
+    container_name: phpmyadmin_nuova-testata
+    depends_on:
+      - db_nuova-testata
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+       PMA_HOST: db_nuova-testata
+       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - net_nuova-testata
+
+# wordpress nuova-testata
+  wordpress_nuova-testata:
+    container_name: wordpress_nuova-testata
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db_nuova-testata
+    volumes:
+      - type: bind
+        source: ./wp-content/uploads
+        target: /var/www/html/wp-content/uploads
+      - ./wp-content:/var/www/html/wp-content
+      - ./upload.ini:/usr/local/etc/php/conf.d/upload.ini
+    environment:
+      WORDPRESS_DB_HOST: db_nuova-testata
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: db_nuova-testata
+    ports:
+      - 8000:80
+    networks:
+      - net_nuova-testata
+
+networks:
+  net_nuova-testata:
+           
+volumes:
+  data_nuova-testata: {}

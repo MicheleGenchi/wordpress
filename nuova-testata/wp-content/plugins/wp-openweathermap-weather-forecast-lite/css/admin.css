@@ -1,0 +1,13 @@
+  .owm_heading {background-color: #d26c22; border: solid 6px #d26c22; color: #fff; border-top: solid 8px #fff;}
+  .owm_heading th {color: #fff;margin-top: 8px;}
+  input[type=text] {
+     width: 240px;
+  }
+  input[type=checkbox] {
+     border: solid 1px #000;
+  }
+
+  .shadbg {
+  	background-color: #ccc;
+  	border:solid 8px #ccc;
+  }

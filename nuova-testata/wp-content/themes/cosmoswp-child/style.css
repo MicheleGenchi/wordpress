@@ -1,0 +1,628 @@
+/*
+Theme Name: CosmosWP Child
+Theme URI: https://www.cosmoswp.com/
+Template: cosmoswp
+Author: cosmoswp
+Author URI: https://www.cosmoswp.com/contact-us/
+Description: CosmosWP is a multi-purpose new generation modern Gutenberg WordPress theme, super-fast, easily customizable, flexible, beautiful, perfect, and highly extendable theme. With a simple download of the CosmosWP, you will have a striking and awesome theme for your website. A great way to design your website with a unique blend of style and technique. It will let you build around several kinds of a website such as a blog, portfolio, business, photography, entertainment etc. Also, specialized sites like Restaurant, Spa, Charity, Meditation, Wedding, Dentist, Education, Medical and much more. Being integrated with WooCommerce and Easy Digital Download you can even build an e-commerce based website. Besides that, it works well with almost all page builders as Gutentor, Elementor, SiteOrigin, Beaver Builder, Visual Composer, Divi, etc. Furthermore, features like SEO friendly, Responsive, RTL Ready, Translation Ready, Gutenberg compatible, and many other WordPress plugins compatible are also included in the theme. Finally, the theme already has an instant demo setup so you can commence your elegant and phenomenal website right away.
+Tags: blog,e-commerce,portfolio,grid-layout,one-column,two-columns,three-columns,four-columns,left-sidebar,right-sidebar,custom-background,custom-colors,custom-header,custom-logo,custom-menu,editor-style,featured-images,flexible-header,footer-widgets,full-width-template,microformats,post-formats,rtl-language-support,sticky-post,theme-options,threaded-comments,translation-ready,block-styles,wide-blocks
+Version: 1.3.7.1700249850
+Updated: 2023-11-17 20:37:30
+
+*/
+
+/*------------------------------------------------------ ANCONA NEWS TODAY --------------------------------*/
+/*------------------------------------------------------ colori del sito    ---------------------------------------------------*/
+:root {
+	--colore-principale:darkred;
+	--colore-secondario:white;
+    --sottolinea: underline solid var(--colore-principale) 4px;
+	--luminoso:white;
+	--scuro:black;
+	--font-family: Times, Times New Roman, serif;
+	--contenuto:16px;
+	--normale:600;
+	--titolo:20px;
+	--grassetto:bolder;
+	--colore-linee:#f5f5f5;
+	--colore-footer:#e4e4e4e4;
+	--filter:alpha(opacity=80)!important; /*IE*/
+    --opacity: 0.8!important; /*Safari, FF, Chrome, Opera*/
+	--nofilter:alpha(opacity=100)!important; /*IE*/
+    --noopacity: 1!important; /*Safari, FF, Chrome, Opera*/
+    --box-shadow: 0px 3px 6px black;
+}
+
+/*----------------------------------------------------------- SPONSOR -----------------------------------------------------*/
+/* Sponsor di sinistra */ /* Sponsor di destra */
+div#metaslider-id-901, div#metaslider-id-870 {
+	display:absolute;
+	position:fixed!important;
+	top:auto!important;
+	bottom:auto!important;
+	padding:5px!important;
+	width:150px!important;
+	height:100%!important;
+	background-color:white;
+}
+
+div#metaslider-id-901 {
+	left:0!important;
+}
+
+div#metaslider-id-870 {
+	right:0!important;
+}
+
+
+/* ------------------------------------------------------------  HEADER  --------------------------------------------------------*/
+
+/* font per tutta la pagina */
+* {
+	font-family: var(--font-family);
+	font-size:var(--contenuto);
+	font-weight:var(--normale);
+	color:var(--scuro);
+	padding:0;
+	margin:0;
+}
+
+#cwp-header-wrap .cwp-top-header {
+	margin:0!important;
+	padding:0!important;
+}
+
+#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-top-header.cwp-sticky-disable,
+#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-top-header.cwp-sticky-disable > div > div {
+	padding-top:0!important;
+	padding-bottom:0!important;
+}
+
+/* alligna icone social a sinistra */
+header#cwp-header-wrap .cwp-social-links {
+	text-align:left;
+}
+
+/* button-Login */
+#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-top-header.cwp-sticky-disable > div > div > div:nth-child(3) > span > a {
+	color:var(--colore-principale)!important;
+	padding:5px 10px 5px 10px;
+	border-radius:20px;
+	box-shadow:var(--box-shadow);
+}
+
+/* altezza dello sfondo su titolo */
+#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-main-header.cwp-sticky-disable.cwp-enable-overlay {
+	min-height:160px;
+}
+
+/* altezza dello sfondo su titolo */
+#cwp-header-wrap > div.cwp-desktop-header.cwp-hide-on-mobile > div.cwp-main-header.cwp-sticky-disable.cwp-enable-overlay>div {
+	padding-top:5%;
+	padding-bottom:auto;
+}
+
+/* linea grigia che divide il top header dal resto */
+header#cwp-header-wrap>div:nth-child(1)>div:nth-child(1) {
+	border-bottom:1px solid lightgrey;
+}
+
+/* tutto l'header è grigio escluso il top header che resta bianco */
+header#cwp-header-wrap>div>div:not(div:first-child) {
+	background-color:var(--luminoso);
+}
+
+/* stile menu */
+header#cwp-header-wrap div.cwp-bottom-header {
+	line-height:30px;
+}
+header#cwp-header-wrap div.cwp-bottom-header a {
+	font-size:26px!important;
+	font-weight:var(--grassetto);
+}
+
+/* spazio a sinistra per ogni voce di menu */
+header#cwp-header-wrap div.cwp-bottom-header>ul.cwp-primary-menu li {
+	padding-left:20px;
+}
+
+/* menu sottolinea quando stai con il mouse sopra */
+header#cwp-header-wrap ul#menu-primary-menu-1 > li :is(:hover, :focus, :active):not(header#cwp-header-wrap ul#menu-primary-menu-1 > li ul ) {
+	color:var(--colore-principale);
+  	text-decoration: var(--sottolinea);
+	text-underline-offset:12px;
+}
+
+/* box-cerca */
+header#cwp-header-wrap div.search.cwp-search-box>* {
+	border:1px solid var(--scuro);
+}
+
+div#cwp-dropdown-search-form-wrapper>form {
+	background-color:var(--colore-principale);
+}
+/* icone social */
+header#cwp-header-wrap div.cwp-social-links>ul li:hover {
+	background-color: var(--colore-principale)!important;
+}
+
+header .cwp-bottom-header {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/*------------------------------------------------------- BODY -----------------------------------------------*/
+/* -----------------------------  pulsanti di navigazione delle pagine avanti(<) e indietro(<) ------------------- */
+
+main ul.gutentor-next-prev li a:hover:not(li a.gutentor-disabled), ul.gutentor-next-prev li a:active {
+	background-color: var(--colore-principale);	
+	color:var(--luminoso);
+}
+
+main ul.gutentor-pagination li a:hover:not(li a.gutentor-disabled), ul.gutentor-pagination li.gutentor-pagination-active a {
+	background-color: var(--colore-principale);	
+	color:var(--luminoso);
+}
+
+main div.gutentor-navigation>ul.gutentor-next-prev li a{
+	background-color:var(--scuro);
+}
+
+main div.gutentor-navigation>ul.gutentor-next-prev li {
+	color:var(--scuro);
+}
+
+main div.gutentor-navigation>ul.gutentor-next-prev li .gutentor-disabled {
+	background-color: var(--scuro);
+}
+
+main ul.slick-dots>li:hover,ul.slick-dots>li>button:hover {
+	background-color:var(--colore-principale)!important;
+}
+
+/* -----------------------------------------------   gestione degli annunci   ------------------------------------------*/
+main .modal-posizionamento_content {
+	display: flex;
+}
+
+main .modal-posizionamento_content img, .posizionamento_laterale img {
+	width: auto;
+	height: auto;
+	margin:5%;
+	padding:15%;
+}
+
+/* ---------------------------------------------------   main   ---------------------------------------------------------*/
+main, header  {
+	box-shadow:0 -4px 6px grey;
+}
+
+main {
+	box-shadow:var(--box-shadow);	
+}
+
+main#cwp-main * {
+	/* init */
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/* misure generiche di un'immagine */
+main img {
+	width:contain;
+	height:260px;
+}
+
+/* linea lunga */
+main#cwp-main section .gutentor-text-wrap:not(.seguici-laterale h1.gutentor-text-wrap), main#cwp-main div[id^="section"].in_evidenza {
+	border-bottom:1px solid var(--colore-principale);
+}
+
+/* linea doppia sotto i titoli nel content*/
+main .gutentor-text-wrap>h1.gutentor-text:not(main#cwp-main section.seguici-laterale) {
+    padding:0!important;
+	text-decoration:var(--sottolinea);
+	text-decoration-color:var(--colore-principale);
+	text-underline-offset:8px;
+}
+
+
+
+
+/* ----------------------------------------------------------- altro ---------------------------------------- */
+main .gutentor-categories > a{
+	color: var(--colore-principale);
+}
+
+main div.gutentor-filter-navigation > div.gutentor-filter-wrap > ul.gutentor-filter-list > li.gutentor-filter-item:hover a, div.gutentor-filter-navigation > div.gutentor-filter-wrap > ul.gutentor-filter-list > li.gutentor-filter-item a:hover {
+	font-weight:bold;
+	font-size:16px;
+	color: var(--colore-principale)!important;
+}
+
+/* meteo */
+main .meteo {
+	margin-top:60px!important;
+	margin-bottom:30px!important;
+	margin-left:0!important;
+}
+
+/*--------------------------------------------------- spazio e divisioni tra sezioni e articoli  ------------------------------------------*/
+
+/* linea divisione di articoli (orizzontali) */
+main .grid-row {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+main div[id^="col"]:first-child .gutentor-grid-item-wrap>div.grid-row, 
+main div[id^="col"]:first-child div.grid-row>div[class^="grid"]:first-child,
+main div[id^="col"]:first-child section[class^="gutentor-post-module"] 
+{
+	border-bottom:1px solid var(--colore-linee);
+} 
+
+/* linea divisione di articoli (verticali) */
+main section:nth-child(3)
+div[id^="col"]:first-child div.grid-row article:first-child, 
+main section:nth-child(3)
+div[id^="col"]:first-child div.grid-row article:nth-child(3),
+main section:nth-child(3)
+div[id^="col"]:first-child div.grid-row article:nth-child(5) {
+	border-right:1px solid var(--colore-linee);
+}
+
+
+/*linea divisoria della barra laterale destra*/
+main div[id^="col"]:nth-child(2) {
+	border-left:1px solid var(--colore-linee);
+}
+
+main div[id^="col"]:nth-child(2) section {
+	margin-bottom:25px!important;
+}
+
+
+
+/* flash e bordi arrotondati articoli */
+/*main div[id^="col"]:first-child .gutentor-single-item, div[id^="col"]:first-child .gutentor-post-item {*/
+main>section:first-child div[id^="col"]:first-child>div>section:first-child .gutentor-single-item,
+main>section:first-child div[id^="col"]:first-child>div>section:first-child .gutentor-post-item {
+	border-radius:12px;
+	box-shadow:var(--box-shadow);
+}
+
+/* --------------------------------------------------- dimensione immagini -------------------------------------------------*/
+/* content categorie foto grande*/
+main section.categorie div.grid-row>div[id^="col"]:first-child img {
+	width:460px;
+	height:500px;
+}
+
+/* content categorie foto piccole */
+main section.categorie div.grid-row>div[id^="col"]:nth-child(2) img {
+	width:260px;
+	height:160px;
+}
+
+section.barra-laterale article img {
+	height:60px;
+}
+
+section.barra-laterale div.grid-row {
+	grid-gap: 40px;
+}
+
+main article h1, main article h2, main article h3 {
+	padding:4%;
+}
+
+.gutentor-post-desc { 
+	padding:0 4% 4% 4%;
+}
+
+
+/*effetto flash su articoli 
+main article img{
+	filter:var(--nofilter);
+    opacity: var(--noopacity);
+}
+
+main article:hover img {
+	filter:var(--filter);
+    opacity: var(--opacity);*/
+	/*text-decoration: var(--sottolinea);*//*
+}
+*/
+
+/*effetto ombrato su articoli */
+main article img {
+	-webkit-filter: brightness(100%);
+}
+main article:hover img {
+	 -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/* distanza tra articoli nella sezione content "first-child" */
+main div[id^="col"]:first-child article {
+	padding:2%!important;	
+}
+
+
+
+/*l'articolo sopra il meteo */
+main .article.no-box.no-border {
+	border:none!important;
+}
+
+main .article.no-box.no-border .grid-row>article {
+	border:none!important;
+}
+
+
+main .article.no-box.no-border>.grid-container article>div {
+	border-radius:0px;
+	box-shadow:none;
+}
+
+/*-------------------------------------------------- seguici laterale ------------------------------------------*/
+/* blocco seguici */
+main .seguici-laterale * {
+	color:var(--luminoso);
+}
+
+main .seguici-laterale {
+	background-color:var(--colore-principale);
+	margin-left:auto!important;
+	margin-right:auto!important;
+	width:210px;
+}
+
+main .seguici-social .gutentor-grid-column:hover {
+	background-color: var(--luminoso);
+}
+
+main .seguici-social .gutentor-grid-column:hover i {
+	color:var(--colore-principale);
+}
+
+
+main section.ultimo-slide-post {
+	padding-top:0;
+	margin-bottom:100px!important;
+	border:none;
+}
+
+main section.ultimo-slide-post img {
+	height:200px;
+	border:none;
+}
+
+	/* podcast */
+	main section.podcast * {
+		color:var(--luminoso);
+	}
+
+/*-------------------------------------------------------   footer ---------------------------------------------*/
+footer * {
+	color:var(--colore-footer)!important;
+	font-size:var(--contenuto);
+	font-weight:var(--normale);
+	text-align:left;
+}
+footer *:not(.cwp-footer-social-links *) {
+	color:var(--colore-footer)!important;
+	font-family:var(--font-family)!important;
+	text-align:left;
+}
+
+footer #footer-social {
+	text-align:right;
+}
+
+footer h3 {
+	margin-left:2%;
+}
+
+footer .cwp-main-footer ul {
+	margin-left:6%;
+}
+
+footer ul>li>a:hover {
+	color:var(--colore-principale)!important;
+}
+
+footer .cwp-bottom-footer * {
+	text-align:center;
+}
+
+/* copyright TedescoConsulting */
+footer a#copyright {
+	color:var(--colore-principale)!important;
+}
+
+footer #contatti .email:hover {
+	color:var(--colore-principale)!important;	
+}
+
+/* copyright TedescoConsulting */
+footer#cwp-footer-wrap a#copyright:hover {
+	font-weight:bold!important;
+	zoom:1.15;
+}
+
+
+/*----------------------------------------------------- scroll button --------------------------------------------*/
+a.cwp-scroll-to-top {
+	border:2px solid black;
+	background-color:var(--colore-principale);
+	color:var(--scuro);
+}
+
+a.cwp-scroll-to-top:hover{
+	background-color:var(--colore-secondario);
+}
+a.cwp-scroll-to-top:hover span>i {
+	border-color:var(--colore-principale);
+}
+
+a.cwp-scroll-to-top:hover span>i {
+    color:var(--scuro);
+}
+
+
+/************************************************   BLOG SETTINGS *******************************************************/
+
+body.category .cwp-blog-grid.grid-md-6 {
+	border-color:1px solid var(--colore-linee);
+}
+
+body.category article {
+	width:360px;
+	min-height:360px;
+	padding:2%;
+	border:none;
+}
+
+body.category article img {
+	width:360px;
+	height:200px;
+}
+
+body.category h1.page-title {
+	color:var(--colore-principale);
+}
+
+body.category h1.page-title span {
+	font-size:28px;
+	color:var(--scuro);
+}
+
+body.category aside>div:first-child {
+	border-color:var(--colore-principale)!important;
+}
+
+/**********************************************  su cellulare e tablet  ********************************************/
+/* fino a 992px il background del paragrafo social deve avere questo stile */
+@media screen and (max-width: 992px) {
+
+
+	/*----------------------------------------------- menu -----------------------------------------------*/
+	/* menu button close*/
+	#cwp-header-menu-sidebar > div.cwp-close-btn-box > a > i {
+		font-size:32px;
+		color:var(--luminoso)!important;
+	}
+
+	/* Hover sul menu */
+	header div#cwp-header-menu-sidebar ul#menu-primary-menu li a:hover {
+		color:var(--colore-principale);
+  		text-decoration: var(--sottolinea);
+		text-underline-offset:14px;
+	}
+
+/* menu button 3 linee */
+	header .cwp-mobile-header.cwp-hide-on-desktop>.cwp-top-header>.grid-container>.grid-row>div:last-child>span>a>i {
+		font-size:32px;
+	}
+	
+/* menu login */
+	header div#cwp-header-menu-sidebar>span>a.btn.btn-primary {
+		color:var(--luminoso);
+		border-radius:20px;
+	}
+	
+	header div#cwp-header-menu-sidebar>span>a.btn.btn-primary>i {
+		color:var(--luminoso);
+	}
+	
+	header div#cwp-header-menu-sidebar>span>a.btn.btn-primary:hover i {
+		color:var(--colore-principale);
+	}
+	
+	header div#cwp-header-menu-sidebar>span>a.btn.btn-primary:hover {
+		border-color:var(--colore-principale);
+	}
+	
+
+/*-----------------------------------------------------------  MAIN ----------------------------------------------------------*/
+    main#cwp-main section.gutentor-post-module>div.grid-container>div.grid-row>article>div {
+		border:none;
+    }
+	main#cwp-main>section div.grid-container {
+		padding-left:10px;
+		padding-right:10px;
+	} 
+	
+	/*--------------------------------------  pubblicità su cellulare e tablet   ----------------------------*/
+	/* solo un blocco pubblicitario sul cellulare,nasconde gli altri 2 */
+	 main .modal-posizionamento_content>*:nth-child(2) {
+		display:none;
+	}
+	main .modal-posizionamento_content>*:nth-child(3) {
+		display:none;
+	}	
+	
+	
+	/*-------------------------------------------------- seguici laterale ------------------------------------------*/
+	/* blocco seguici */
+ 	
+	main .seguici-laterale {
+		padding:5px!important;
+		margin:0!important;
+		width:auto!important;
+	}
+	
+	main .seguici-laterale .grid-row {
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+	
+	main section.seguici-social div.grid-row * {
+		margin-left:0;
+		margin-right:0;
+		padding-left:0!important;
+		padding-right:0!important;
+	}
+	/* meteo */
+	main .meteo {
+		margin-top:30px!important;
+		margin-bottom:30px!important;
+		margin-left:5%!important;
+		margin-right:5%!important;                               	}
+	
+	main>section:first-child>div.grid-container>div.grid-row>div:first-child>div>section:nth-child(2) {
+		display:none;
+	}   	
+	
+	/* podcast */
+	main>section.podcast img {
+		width:200px;
+		height:150px;
+	}
+	
+	section.barra-laterale article img {
+		height:100px;
+	}
+
+	
+
+/*------------------------------------------------------------------ FOOTER --------------------------------------------------------*/
+	footer#cwp-footer-wrap #footer-social {
+		text-align:left;
+	}
+	
+	footer#cwp-footer-wrap #footer-social {
+		text-align:left;
+	}
+
+	footer .cwp-footer-social-links {
+		margin-left:6%;
+	}
+	
+}
