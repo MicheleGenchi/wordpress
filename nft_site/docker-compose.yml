@@ -1,0 +1,57 @@
+services:
+
+  db_nft_site:
+    container_name: db_nft_site
+    image: mysql:8.0.32
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_nft_site
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - data_nft_site:/var/lib/mysql
+    networks:
+      - net_nft_site
+
+  phpmyadmin_nft_site:
+    container_name: phpmyadmin_nft_site
+    depends_on:
+      - db_nft_site
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+       PMA_HOST: db_nft_site
+       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - net_nft_site
+
+# wordpress nft_site
+  wordpress_nft_site:
+    container_name: wordpress_nft_site
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db_nft_site
+    volumes:
+      - type: bind
+        source: ./wp-content/uploads
+        target: /var/www/html/wp-content/uploads
+      - ./wp-content:/var/www/html/wp-content
+      - ./upload.ini:/usr/local/etc/php/conf.d/upload.ini
+    environment:
+      WORDPRESS_DB_HOST: db_nft_site
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: db_nft_site
+    ports:
+      - 8000:80
+    networks:
+      - net_nft_site
+
+networks:
+  net_nft_site:
+           
+volumes:
+  data_nft_site: {}

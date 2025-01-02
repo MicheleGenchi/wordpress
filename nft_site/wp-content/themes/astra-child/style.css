@@ -1,0 +1,95 @@
+/*
+Theme Name: Astra Child
+Theme URI: https://wpastra.com/
+Template: astra
+Author: Brainstorm Force
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: Astra is fast, fully customizable &amp; beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL &amp; Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained &amp; Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and WooCommerce ready theme that you can use for building any kind of website!
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog
+Version: 4.6.5.1708588353
+Updated: 2024-02-22 08:52:33
+
+*/
+
+@import url('https://fonts.cdnfonts.com/css/tender-goliath-small-caps');
+@import url('https://fonts.cdnfonts.com/css/noto-naskh-arabic');
+
+:root {
+	--colore-principale:lightgreen;
+	--colore-secondario:#eed322;
+	--bordersx:1px solid var(--colore_principale);
+	--filter:alpha(opacity=80)!important; /*IE*/
+    --opacity: 0.8!important; /*Safari, FF, Chrome, Opera*/
+	--nofilter:alpha(opacity=100)!important; /*IE*/
+    --noopacity: 1!important; /*Safari, FF, Chrome, Opera*/
+    --box-shadow: 0px 3px 6px black;
+	--font-title: 'Tender Goliath Small-Caps', sans-serif;
+	--font-global: 'Noto Naskh Arabic', sans-serif;
+	--sottolinea: underline solid var(--colore-principale) 4px;
+}
+
+.ast-site-title-wrap {
+	font-family:var(--font-title)!important;
+	font-size:60px;
+	border-bottom:1px solid var(--colore-principale);
+}
+
+h1,h2,h3,h4,h5,h6,h7,p,a {
+	font-family:var(--font-global);
+	color: black;
+}
+
+h2 {
+	font-size:48px;
+}
+main h2 {
+	text-decoration:var(--sottolinea);
+	text-decoration-color:var(--colore-principale);
+	text-underline-offset:8px;
+}
+
+main div.wp-block-uagb-advanced-heading {
+	border-left:1px solid var(--colore_principale);
+	padding-left:10px;
+}
+
+p {
+	font-size:18px;
+}
+
+a:hover, footer #block-15 a>span:hover #block-15 a {
+	color:var(--colore-principale);
+}
+
+li[id^="menu"]>a {
+	font-size:22px;
+}
+
+li[id^="menu"]>a:hover {
+	font-size:22px;
+	font-weight:bolder;
+}
+
+p#copyright:hover a  {
+	zoom:1.1;
+	font-weight:bolder;
+}
+
+.woocommerce-breadcrumb { display: none; }
+
+body.privacy-policy .ast-above-header-wrap, body.privacy-policy .site-below-header-wrap, body.privacy-policy footer, 
+body.page-id-1185 .ast-above-header-wrap, body.page-id-1185 .site-below-header-wrap, body.page-id-1185 footer,
+body.page-id-995 .ast-above-header-wrap, body.page-id-995 .site-below-header-wrap, body.page-id-995 footer,
+body.page-id-995 .ast-site-title-wrap, 
+body.single-product .ast-main-header-wrap, body.single-product .ast-below-header-wrap, body.single-product footer
+{
+	display:none;
+}
+
+body.privacy-policy .ast-site-title-wrap>span>a, body.page-id-1185 .ast-site-title-wrap>span>a {
+	color:black;
+}
+
+body.privacy-policy .ast-site-title-wrap>span>a:hover, body.page-id-1185 .ast-site-title-wrap>span>a:hover {
+	color:var(--colore-principale);
+}
