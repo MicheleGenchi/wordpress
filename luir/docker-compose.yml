@@ -1,0 +1,57 @@
+services:
+
+  db_luir:
+    container_name: db_luir
+    image: mysql:8.0.32
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_luir
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - data_luir:/var/lib/mysql
+    networks:
+      - net_luir
+
+  phpmyadmin_luir:
+    container_name: phpmyadmin_luir
+    depends_on:
+      - db_luir
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+       PMA_HOST: db_luir
+       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - net_luir
+
+# wordpress luir
+  wordpress_luir:
+    container_name: wordpress_luir
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db_luir
+    volumes:
+      - type: bind
+        source: ./wp-content/uploads
+        target: /var/www/html/wp-content/uploads
+      - ./wp-content:/var/www/html/wp-content
+      - ./upload.ini:/usr/local/etc/php/conf.d/upload.ini
+    environment:
+      WORDPRESS_DB_HOST: db_luir
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: db_luir
+    ports:
+      - 8000:80
+    networks:
+      - net_luir
+
+networks:
+  net_luir:
+           
+volumes:
+  data_luir: {}
