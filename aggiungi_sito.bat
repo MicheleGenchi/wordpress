@@ -1,5 +1,5 @@
 @echo off
-set ROOTPATH=D:\Documenti\Wordpress
+set ROOTPATH=D:\Sviluppo\Wordpress
 
 echo Enter your nome sito : 
 set /p NOMESITO=
@@ -33,7 +33,7 @@ rem scrivi Dockerfile
 echo %NOMEPROGETTO% %PORTA%
 (
 echo FROM wordpress
-echo COPY ./%NOMESITO%/wp-content/uploads /var/www/html/wp-content/uploads
+echo COPY ./wp-content/uploads /var/www/html/wp-content/uploads
 echo RUN pecl install xdebug
 echo RUN docker-php-ext-enable xdebug
 echo RUN apt update -y && apt install git zip zsh wget -y
